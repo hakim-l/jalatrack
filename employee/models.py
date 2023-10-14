@@ -1,14 +1,21 @@
 from django.db import models
 from division.models import DivisionModel
+from django.contrib.auth.models import AbstractUser, AbstractBaseUser
+#https://learndjango.com/tutorials/django-custom-user-model
 # Create your models here.
 
-class EmployeeModel(models.Model):
+class EmployeeModel(AbstractUser):
     id = models.AutoField(unique=True,
                           primary_key=True,
                           )
-    name= models.CharField(max_length=255,
-                           null=False
+    username= models.CharField(max_length=255,
+                           null=False,
+                               unique=True
                            )
+
+    # password = models.CharField(max_length=255,
+    #                             null=False
+    #                             )
     email= models.CharField(max_length=255,
                             null= False
                             )
@@ -24,6 +31,9 @@ class EmployeeModel(models.Model):
     position_name= models.CharField(max_length=255,
                                     null=False,
                                     default="intern")
+
+    def __str__(self):
+        return self.username
 
     class Meta:
         db_table= 'employees'

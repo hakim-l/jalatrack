@@ -5,7 +5,7 @@
 # gcloud spanner instances create $INSTANCE --config=regional-asia-southeast1 --description="ShrimpHack" --nodes=1
 # gcloud spanner databases create $DB --instance $INSTANCE
 # $ python3 manage.py migrate
-
+#https://learndjango.com/tutorials/django-custom-user-model
 #user: elaina
 #email: lukman@jala.tech
 #pass: %ImasIndra%
