@@ -1,0 +1,11 @@
+#https://github.com/googleapis/python-spanner-django/
+# INSTANCE="elisa"
+# GOOGLE_CLOUD_PROJECT="education-392215"
+# DB="master"
+# gcloud spanner instances create $INSTANCE --config=regional-asia-southeast1 --description="ShrimpHack" --nodes=1
+# gcloud spanner databases create $DB --instance $INSTANCE
+# $ python3 manage.py migrate
+
+#user: elaina
+#email: lukman@jala.tech
+#pass: %ImasIndra%
