@@ -4,6 +4,7 @@ from django.contrib.auth.models import AbstractUser, AbstractBaseUser
 #https://learndjango.com/tutorials/django-custom-user-model
 # Create your models here.
 
+
 class EmployeeModel(AbstractUser):
     id = models.AutoField(unique=True,
                           primary_key=True,
@@ -25,7 +26,7 @@ class EmployeeModel(AbstractUser):
                                                  )
     is_supervisor= models.BooleanField(default=False,
                                        )
-    division_id= models.ForeignKey(DivisionModel,on_delete=models.CASCADE,
+    division= models.ForeignKey(DivisionModel,on_delete=models.CASCADE,
                                    null= False
                                    )
     position_name= models.CharField(max_length=255,

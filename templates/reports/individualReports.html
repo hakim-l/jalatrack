@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Individual Report</title>
+
+    <style>
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  margin-left:-5px;
+  margin-right:-5px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+</style>
+</head>
+<h2 style= "text-align:center;"> Individual Report</h2>
+<body>
+<div class="row">
+    <div class="column" style="height:200px; overflow-y: scroll;">
+         <table>
+      <tr>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Task Done</th>
+          <th>Attachment</th>
+          <th>Percentage</th>
+      </tr>
+      {% for item in plan %}
+            <tr>
+                <td>{{ item.end_at }}</td>
+                <td>{{ item.employee__first_name }}</td>
+                <td>{{ item.activity }}</td>
+                <td>{{ item.activity_type }}</td>
+                <td>{{ item.percentage }}</td>
+            </tr>
+            {% endfor %}
+    </table>
+    </div>
+
+    <div class="column" style="height:200px; overflow-y: scroll;">
+        <table>
+      <tr>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Task Done</th>
+          <th>Attachment</th>
+          <th>Percentage</th>
+      </tr>
+            {% for item in activity %}
+            <tr>
+                <td>{{ item.end_at }}</td>
+                <td>{{ item.employee__first_name }}</td>
+                <td>{{ item.activity }}</td>
+                <td>{{ item.activity_type }}</td>
+                <td>{{ item.percentage }}</td>
+            </tr>
+            {% endfor %}
+    </table>
+    </div>
+</div>
+</body>
+</html>

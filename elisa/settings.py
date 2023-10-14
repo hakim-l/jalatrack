@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import dotenv
+
+import storage.storage
+
 dotenv.load_dotenv()
 import os
 
@@ -30,7 +33,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+DEFAULT_FILE_STORAGE=storage.storage.AlwaysOverwriteFileSystemStorage
 # Application definition
 
 INSTALLED_APPS = [
@@ -127,7 +130,8 @@ USE_I18N = True
 
 USE_TZ = True
 
-
+LOGIN_REDIRECT_URL="home"
+LOGOUT_REDIRECT_URL='home'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
