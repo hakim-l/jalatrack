@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="master" uuid="611dfd68-bbb7-4514-a5d8-8d7d17c14863">
+      <driver-ref>cloudspanner</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.google.cloud.spanner.jdbc.JdbcDriver</jdbc-driver>
+      <jdbc-url>jdbc:cloudspanner:/projects/education-392215/instances/elisa/databases/master</jdbc-url>
+      <jdbc-additional-properties>
+        <property name="credentials" value="D:\Hackathon\Ti22\credentials\education-392215-f76e9fb97df6.json" />
+      </jdbc-additional-properties>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+  </component>
+</project>
